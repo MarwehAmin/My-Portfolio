@@ -1,0 +1,483 @@
+body {
+    margin: 0;
+    font-family:   'Raleway', sans-serif;
+    background: #BF9264;
+    color: #fdf6ec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+    overflow-x: hidden;
+  }
+
+  .title {
+    font-size: 4rem;
+    font-family:'Shrikhand', sans-serif ;
+    font-weight: bold;
+    background: linear-gradient(270deg, #ffbe0b,  #ffbe0b,  #ffbe0b, #f15bb5);
+    background-size: 1200% 1200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease-in-out infinite alternate;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    max-width: 600px;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+
+  
+  .leaf {
+    position: absolute;
+    top: -50px;
+    width: 30px;
+    height: 30px;
+    background-image: url('../download-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-name: fallSway;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+  }
+
+  @keyframes fallSway {
+    0% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    25% {
+      transform: translateX(20px) translateY(25vh) rotate(90deg);
+      opacity: 0.9;
+    }
+    50% {
+      transform: translateX(-20px) translateY(50vh) rotate(180deg);
+      opacity: 0.8;
+    }
+    75% {
+      transform: translateX(20px) translateY(75vh) rotate(270deg);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateX(0) translateY(110vh) rotate(360deg);
+      opacity: 0.6;
+    }
+  }
+
+  .leaf1 { left: 10%; animation-duration: 10s; animation-delay: 0s; }
+  .leaf2 { left: 25%; animation-duration: 12s; animation-delay: 2s; }
+  .leaf3 { left: 40%; animation-duration: 9s;  animation-delay: 4s; }
+  .leaf4 { left: 60%; animation-duration: 11s; animation-delay: 1s; }
+  .leaf5 { left: 75%; animation-duration: 13s; animation-delay: 3s; }
+  .leaf6 { left: 85%; animation-duration: 10s; animation-delay: 5s; }
+
+
+  .about-section {
+    background-color: white;
+    text-align: center;
+    padding: 40px 30px;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+    margin-top: 250px;
+  }
+
+  .about-section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color:  #BF9264;
+  }
+
+  .about-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgb(36, 36, 36);
+  }
+
+  .skill {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 70px;
+  }
+
+  .skills-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color:white ;
+  }
+
+  .skills-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .skill-container {
+    background-color: white;
+    padding: 20px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    
+  }
+
+  .skill-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+    color: #BF9264;
+  }
+
+  .skill-bar {
+    background-color: #333;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid;
+    overflow: hidden;
+    color: white;
+  }
+
+  .skill-progress {
+    height: 100%;
+    width: var(--skill-percentage);
+    background: linear-gradient(to right,#ffbe0b, #f15bb5);
+    transition: width 1s ease-in-out;
+    background-position: left center;
+   
+  }
+
+  .skill-container:hover .skill-progress {
+    animation: gradientFlow 1.5s linear infinite;
+    background-size: 200% auto;
+    cursor: pointer;
+  }
+
+  @keyframes gradientFlow {
+    0% { background-position: left center; }
+    100% { background-position: right center; }
+  }
+
+.section2 {
+  padding:30px 0;
+  max-width: 1200px;
+  text-align: center;
+  margin: auto;
+}
+
+.section2 h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  color: white;
+      
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-content:center ;
+  align-items: center;
+}
+
+.card-container {
+  perspective: 1000px;
+             
+}
+
+.flex {
+  width: 450px;
+  height: 150px;
+  display: flex;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+  text-align: center;
+  
+}
+
+.card-container:hover .flex {
+  transform: rotateY(180deg);
+}
+
+
+.card-face {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: 1px solid ;
+  padding: 10px;
+  backface-visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  transition: background-color 1s;
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-face p {
+  margin-top: 15px;
+  color: black;
+}
+
+.p{
+margin-top: 8px;
+line-height: 0.5px;
+}
+
+
+.card-face:hover {
+  background-color:white ;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color:white ;
+  
+}
+
+
+  @media (max-width: 768px) {
+
+    .grid{
+      grid-template-columns: 1fr ;
+      
+    }
+    .skills-section {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .skills-title {
+      font-size: 2rem;
+    }
+    .skill-name {
+      font-size: 1rem;
+    }
+  }
+
+
+
+.education-container {
+max-width: 600px;
+padding: 20px;
+margin: 40px auto;
+}
+
+.education-title {
+font-size: 2.2rem;
+text-align: center;
+margin-bottom: 40px;
+color: white 
+}
+
+.education-item {
+display: flex;
+align-items: flex-start;
+margin-bottom: 20px;
+}
+
+.icon {
+width: 10px;
+height: 10px;
+background-color: brown; 
+border-radius: 50%;
+margin-right: 10px;
+position: relative;
+top: 5px;
+}
+
+.education-content {
+border-left: 2px solid brown; 
+padding-left: 15px;
+}
+
+.education-content h3 {
+margin: 0;
+font-size: 1.2rem;
+color: white; 
+}
+
+.education-content h4 {
+margin: 5px 0;
+font-size: 1rem;
+color: #333; 
+}
+
+.education-content p {
+margin: 0;
+font-size: 0.9rem;
+color: #333; 
+}
+
+
+.project{
+ margin-top: 30px;
+ color: white;
+}
+.cards {
+display: flex;
+gap: 40px;
+flex-wrap: wrap;
+justify-content: center;
+
+}
+
+.card {
+background: white;
+border-radius: 10px;
+width: 250px;
+height: 300px;
+box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+overflow: hidden;
+position: relative;
+top: 40px;
+transition: transform 0.3s;
+
+}
+
+.card-image {
+width:100%;
+height: 200px;
+transition: transform 0.3s;
+display: block;
+z-index: -5;
+margin-right: auto;
+margin-left: auto;
+}
+
+
+
+.card-content {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+height: 100px;
+background: #FFDAB3;
+padding: 20px 15px;
+text-align: center;
+transform: translateY(100%);
+opacity: 0;
+transition: transform 0.3s ease, opacity 0.3s ease;
+z-index: 5;
+}
+
+
+.card-title {
+font-weight: bold;
+font-size: 1rem;
+margin-bottom: 6px;
+color: #333;
+}
+
+.color{
+color: #333;
+}
+
+
+.card:hover .card-image {
+transform: translateY(-32px);
+}
+
+.card:hover .card-content {
+transform: translateY(0);
+opacity: 1;
+}
+
+
+.login-container {
+background:white;
+padding: 30px;
+border-radius: 12px;
+color: black;
+width: 300px;
+text-align: center;
+backdrop-filter: blur(10px);
+margin-top: 200px;
+margin-bottom: 60px;
+
+}
+
+.login-container h2 {
+margin-bottom: 20px;
+color: #BF9264;
+}
+
+.login-container label {
+display: block;
+text-align: left;
+margin: 10px 0 5px;
+}
+
+.login-container input {
+width: 100%;
+padding: 10px;
+border: none;
+border-radius: 6px;
+margin-bottom: 15px;
+background-color: #dcb58c;
+
+}
+
+.login-container textarea {
+width: 100%;
+padding: 10px;
+border: none;
+border-radius: 6px;
+margin-bottom: 15px;
+background-color: #dcb58c;
+
+}
+
+.login-container button {
+width: 100%;
+padding: 10px;
+background-color:#dcb58c;
+color: #72461a;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+margin-top: 20px;
+
+}
+
+.login-container button:hover {
+    background-color: #FFDAB3;
+}
+
+footer{
+background-color:white;
+color: #956331;
+font-size: 0.9rem;
+text-align: center;
+padding: 5px;
+margin-bottom: 10px;
+width: 100vw;
+
+}
