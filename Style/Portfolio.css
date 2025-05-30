@@ -1,5 +1,8 @@
 * {
-    box-sizing: border-box;}
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
 
 
 body {
@@ -94,7 +97,7 @@ body {
   .about-section {
     background-color: white;
     text-align: center;
-    padding: 40px 30px;
+    padding: 50px 40px;
     max-width: 800px;
     width: 100%;
     border-radius: 10px;
@@ -119,6 +122,7 @@ body {
     width: 100%;
     max-width: 1200px;
     margin-bottom: 70px;
+    margin-top: 50px;
   }
 
   .skills-title {
@@ -137,7 +141,7 @@ body {
   .skill-container {
     background-color: white;
     padding: 20px;
-    width: 200px;
+    width: 250px;
     border-radius: 8px;
     border: 1px solid;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -250,8 +254,8 @@ body {
 }
 
 .p{
-margin-top: 8px;
-line-height: 0.5px;
+margin-bottom: 10px;
+line-height: 2px;
 }
 
 
@@ -382,9 +386,9 @@ position: absolute;
 bottom: 0;
 left: 0;
 right: 0;
-height: 100px;
+height: 140px;
 background: #FFDAB3;
-padding: 20px 15px;
+padding: 10px 15px;
 text-align: center;
 transform: translateY(100%);
 opacity: 0;
@@ -392,7 +396,22 @@ transition: transform 0.3s ease, opacity 0.3s ease;
 z-index: 5;
 }
 
+.link{
+    margin-top: 10px;
+}
+.link a{
+    color: #d09054;
+    text-decoration: none;
+    transition: color 0.3s;
+    background-color: #fdf6ec;
+    border-radius: 8px;
+    padding: 6px;
+}
 
+.link a:hover{
+    color: black;
+    background-color: #BF9264;
+}
 .card-title {
 font-weight: bold;
 font-size: 1rem;
@@ -402,6 +421,7 @@ color: #333;
 
 .color{
 color: #333;
+font-size: small;
 }
 
 
@@ -420,7 +440,7 @@ background:white;
 padding: 30px;
 border-radius: 12px;
 color: black;
-width: 300px;
+width: 350px;
 text-align: center;
 backdrop-filter: blur(10px);
 margin-top: 200px;
@@ -472,7 +492,8 @@ margin-top: 20px;
 }
 
 .login-container button:hover {
-    background-color: #FFDAB3;
+    background-color: #814e14;
+    color: white;
 }
 
 footer{
@@ -480,7 +501,7 @@ background-color:white;
 color: #956331;
 font-size: 0.9rem;
 text-align: center;
-padding: 5px;
+padding: 8px;
 margin-bottom: 10px;
 width: 100vw;
 
